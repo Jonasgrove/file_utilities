@@ -95,7 +95,7 @@ std::unordered_map<std::string, int> write_to_file(std::string umi_chrom, std::s
 }
 
 // 
-int main(){
+int main(int num_args, char** input_file_name){
 
     // variable to set each line to
     std::string sam_line;
@@ -109,7 +109,7 @@ int main(){
 
     // read file with ifstream
     // INSERT PATH TO FILE HERE
-    std::ifstream my_sam_file("/Users/jonasgrove/Documents/Academic Resources/Computer_science/C++/file_utilities/test.sam");
+    std::ifstream my_sam_file(input_file_name[1]);
 
     // go through file with while loop
     while (getline(my_sam_file, line)){
